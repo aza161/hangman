@@ -21,39 +21,59 @@ public class Hangman
         int guesses_left = 8;
         boolean correct;
         System.out.print ("\nYour guesses: " + "\nGuesses left: " + guesses_left + "\nYour guess? ");
-        String guess = input.nextLine ();
+        String guess = "o";
         guess = guess.toUpperCase ();
-        guesses += guess;
-        while (guess.length() > 1){
-            System.out.println("\nType a single letter from A-Z.");
+        do{
+        if (guess.length() > 1 || !Character.isLetter(guess.charAt(0))){
+            System.out.print("Type a single letter from A-Z.\nYour guess? ");
+            guess = input.nextLine();
+            guess = guess.toUpperCase ();
         }
-     /*   while (guesses.contains(guess)){
-            System.out.println("\nYou already guessed that letter.");
-        }*/
-        while (guess.length() == 1){
+        if (guesses.contains(guess)){
+            System.out.print("You already guessed that letter.\nYour guess? ");
+            guess = input.nextLine();
+            guess = guess.toUpperCase ();
+        }
+            //guesses += guess;
+
         if (word.contains (guess))
         {
-            System.out.println ("Correct!");
+            System.out.println ("Correct!\n");
             num_guesses += 1;
             correct = true;
         }
         else
         {
-            System.out.println ("Incorrect!");
+            System.out.println ("Incorrect!\n");
             num_guesses += 1;
             guesses_left -= 1;
             correct = false;
         }
+        if (guess.length() == 1 && Character.isLetter(guess.charAt(0))){
+            guesses += guess;
         if (correct)
-        {
+        {   new_hint = "";
             for(int i = 0; i < hint.length(); i++){
                 if(word.charAt(i) == guess.charAt(0)){
                     new_hint += word.charAt(i);
                 }else{
-                    new_hint += "-";
+                    new_hint += hint.charAt(i);
                 }
             }
+            hint = new_hint;
+        }if(guesses_left > 0 && !new_hint.equals(word))
+        {
+        System.out.print ("Secret word : " + new_hint + "\n\nYour guesses: " + guesses + "\n\nGuesses left: " + guesses_left + "\nYour guess? ");
+        guess = input.nextLine();
+        guess = guess.toUpperCase ();
+        }else
+        {
+        System.out.print("You win! My word was \"" + word + "\"");
         }
+        }
+        }while(guesses_left > 0 && !new_hint.equals(word));
+        if (guesses_left == 0){
+            System.out.println("");
         }
     }
 }
