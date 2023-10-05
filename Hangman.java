@@ -41,12 +41,20 @@ public class Hangman
 
         if (word.contains (guess))
         {
+            Scanner file1 = new Scanner(new File("res/display" + guesses_left + ".txt"));
+            while (file1.hasNext()){
+                System.out.println(file1.nextLine());
+            }
             System.out.println ("Correct!\n");
             num_guesses += 1;
             correct = true;
         }
         else
         {
+            Scanner file1 = new Scanner(new File("res/display" + (guesses_left -1 )+ ".txt"));
+            while (file1.hasNext()){
+                System.out.println(file1.nextLine());
+            }
             System.out.println ("Incorrect!\n");
             num_guesses += 1;
             guesses_left -= 1;
