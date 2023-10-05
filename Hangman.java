@@ -21,7 +21,7 @@ public class Hangman
         int guesses_left = 8;
         boolean correct;
         System.out.print ("\nYour guesses: " + "\nGuesses left: " + guesses_left + "\nYour guess? ");
-        String guess = "o";
+        String guess = input.nextLine();
         guess = guess.toUpperCase ();
         do{
         if (guess.length() > 1 || !Character.isLetter(guess.charAt(0))){
@@ -66,10 +66,12 @@ public class Hangman
         System.out.print ("Secret word : " + new_hint + "\n\nYour guesses: " + guesses + "\n\nGuesses left: " + guesses_left + "\nYour guess? ");
         guess = input.nextLine();
         guess = guess.toUpperCase ();
-        }else
+        }else if(guesses_left > 0 && new_hint.equals(word))
         {
         System.out.print("You win! My word was \"" + word + "\"");
-        }
+        }else{
+            System.out.print("You Lost!");
+            }
         }
         }while(guesses_left > 0 && !new_hint.equals(word));
         if (guesses_left == 0){
