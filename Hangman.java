@@ -8,6 +8,9 @@ public class Hangman
         System.out.println
                 ("CMPS201 Hangman!\nI will think of a random word. You'll try to guess its\nletters. Every time you guess a letter that isn't in my\nword, a new body part of the hanging man appears.\nGuess correctly to avoid the gallows!\n");
         String word = "PROGRAMMER";
+        Scanner file = new Scanner(new File("res/display8.txt"));
+        while (file.hasNext()){
+            System.out.println(file.nextLine());}
         System.out.print ("Secret word : ");
         String hint = "";
         String new_hint = "";
