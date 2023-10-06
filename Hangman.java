@@ -5,6 +5,8 @@ public class Hangman
     public static void main (String[]args) throws FileNotFoundException
     {
         Scanner input = new Scanner (System.in);
+        int total_games = 0;
+        do{
         System.out.println
                 ("CMPS201 Hangman!\nI will think of a random word. You'll try to guess its\nletters. Every time you guess a letter that isn't in my\nword, a new body part of the hanging man appears.\nGuess correctly to avoid the gallows!\n");
         System.out.print ("Please choose a file (dict, large, small, oneword, twowords, wordlenghts): ");
@@ -53,6 +55,10 @@ public class Hangman
                 guess = guess.toUpperCase ();
             }
             //guesses += guess;
+            
+            if (guess.length() > 1){
+                continue;
+            }
 
             if (word.contains (guess))
             {
@@ -112,17 +118,33 @@ public class Hangman
                 else if (guesses_left > 0 && new_hint.equals (word))
                 {
                     System.out.print ("You win! My word was \"" + word + "\"");
+                    total_games += 1;
                 }
                 else
                 {
                     System.out.print ("You Lost!");
+                    total_games += 1;
                 }
             }
         }
         while (guesses_left > 0 && !new_hint.equals (word));
         if (guesses_left == 0)
         {
-            System.out.println ("");
+            System.out.println ("My word was \"" + word + "\"");
         }
+        if (total_games >= 1){
+            System.out.print("\nPlay again (Y/N)? ");
+            String retry = input.next();
+            retry = retry.toUpperCase();
+            while(retry.length() > 1){
+                System.out.print("\nInvalid input. Play again (Y/N)? ");
+                retry = input.next();
+                retry = retry.toUpperCase();
+            }
+            if(retry.equals("N")){
+                break;
+            }
+        }
+        } while (true);
     }
 }
