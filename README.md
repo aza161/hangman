@@ -6,7 +6,7 @@ Dive into the classic game of Hangman with a Java twist! This interactive Hangma
 ## Getting Started
 
 1. **Clone the Repository:**
-   ```
+   ```bash
    git clone -b Finalized-Hangman https://github.com/aza161/hangman.git Hangman-Finalized
    cd Hangman-Finalized
    ```
