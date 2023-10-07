@@ -12,7 +12,7 @@ Dive into the classic game of Hangman with a Java twist! This interactive Hangma
    ```
 
 2. **Run the Game:**
-   ```
+   ```bash
    javac Hangman.java
    java Hangman
    ```
