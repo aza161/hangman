@@ -6,13 +6,13 @@ Dive into the classic game of Hangman with a Java twist! This interactive Hangma
 ## Getting Started
 
 1. **Clone the Repository:**
-   ```bash
+   ```
    git clone -b Finalized-Hangman https://github.com/aza161/hangman.git Hangman-Finalized
    cd Hangman-Finalized
    ```
 
 2. **Run the Game:**
-   ```bash
+   ```
    javac Hangman.java
    java Hangman
    ```
@@ -41,4 +41,3 @@ Pull requests and suggestions are welcome! If you have ideas for improvement or 
 ---
 
 Ready to embark on a Hangman adventure? Run the code and let the games begin! 🚀
-```
