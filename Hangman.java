@@ -157,8 +157,8 @@ public class Hangman
 		  }
 		else if (guesses_left > 0 && new_hint.equals (word))
 		  {
-		    System.out.print ("You win! My word was \"" + word +
-				      "\"");
+		    System.out.println ("You win! My word was \"" + word +
+					"\"");
 		    total_games += 1;
 		    win_count += 1;
 		  }
