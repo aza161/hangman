@@ -183,7 +183,7 @@ public class Hangman
 	    System.out.print ("\nPlay again (Y/N)? ");
 	    String retry = input.next ();
 	    retry = retry.toUpperCase ();
-	    while (retry.length () > 1)
+	    while (!retry.equals ("Y") && !retry.equals ("N"))
 	      {
 		System.out.print ("\nInvalid input. Play again (Y/N)? ");
 		retry = input.next ();
