@@ -180,12 +180,12 @@ public class Hangman
 	  }
 	if (total_games >= 1)
 	  {
-	    System.out.print ("\nPlay again (Y/N)? ");
+	    System.out.print ("Play again (Y/N)? ");
 	    String retry = input.next ();
 	    retry = retry.toUpperCase ();
 	    while (!retry.equals ("Y") && !retry.equals ("N"))
 	      {
-		System.out.print ("\nInvalid input. Play again (Y/N)? ");
+		System.out.print ("Invalid input. Play again (Y/N)? ");
 		retry = input.next ();
 		retry = retry.toUpperCase ();
 	      }
