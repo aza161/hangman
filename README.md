@@ -6,16 +6,12 @@ Dive into the classic game of Hangman with a Java twist! This interactive Hangma
 ## Getting Started
 
 1. Clone the Repository:
-   ```
    git clone -b main https://github.com/aza161/hangman.git main
    cd main
-   ```
 
 2. Run the Game:
-   ```
    javac Hangman.java
    java Hangman
-   ```
 
 3. Enjoy the Game:
    Follow the on-screen instructions, guess letters, and experience the joy of victory or the challenge of the gallows!
