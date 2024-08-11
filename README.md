@@ -1,4 +1,3 @@
-```markdown
 # Welcome to CMPS201 Hangman Game! 🎉
 
 Dive into the classic game of Hangman with a Java twist! This interactive Hangman code is your own personal game host, complete with exciting audio cues and thrilling gameplay.
@@ -6,18 +5,21 @@ Dive into the classic game of Hangman with a Java twist! This interactive Hangma
 ## Getting Started
 
 1. **Clone the Repository:**
+
    ```bash
-   git clone -b Finalized-Hangman https://github.com/aza161/hangman.git Hangman-Finalized
-   cd Hangman-Finalized
+   git clone -b main https://github.com/aza161/hangman.git main
+   cd main
    ```
 
 2. **Run the Game:**
+
    ```bash
    javac Hangman.java
    java Hangman
    ```
 
 3. **Enjoy the Game:**
+
    Follow the on-screen instructions, guess letters, and experience the joy of victory or the challenge of the gallows!
 
 ## Features
@@ -38,6 +40,5 @@ Dive into the classic game of Hangman with a Java twist! This interactive Hangma
 
 Pull requests and suggestions are welcome! If you have ideas for improvement or want to add features, feel free to contribute.
 
----
-
 Ready to embark on a Hangman adventure? Run the code and let the games begin! 🚀
+```
